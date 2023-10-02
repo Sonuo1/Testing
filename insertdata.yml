@@ -1,0 +1,11 @@
+# .semaphore/your_job_name.yml
+version: v1.0
+name: Insert Data into MySQL
+
+jobs:
+  - name: Insert Data
+    commands:
+      - checkout
+      - setup-python 3.8
+      - pip install mysql-connector-python
+      - python insert_data.py

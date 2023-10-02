@@ -2,7 +2,7 @@
 
 # Start a new browser session
 start:
-  open http://localhost
+  host:localhost
   assert element with id=firstname exists
   assert element with id=lastname exists
   assert element with id=email exists

@@ -1,0 +1,24 @@
+# Test scenario for Registration Form
+
+# Start a new browser session
+start:
+  open http://localhost
+  assert element with id=firstname exists
+  assert element with id=lastname exists
+  assert element with id=email exists
+  assert element with id=phone exists
+
+# Fill out the registration form
+registration:
+  type id=firstname YourFirstName
+  type id=lastname YourLastName
+  type id=email youremail@example.com
+  type id=phone 1234567890
+
+# Submit the form
+submit:
+  click id=submit
+
+# Wait for the registration result
+result:
+  wait for text "Registration successful!" to exist

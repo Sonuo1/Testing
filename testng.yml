@@ -1,8 +1,8 @@
 # Test scenario for Registration Form
 
 # Start a new browser session
-start:
-  host:localhost
+hosts: localhost
+  gather_facts: false
   assert element with id=firstname exists
   assert element with id=lastname exists
   assert element with id=email exists
